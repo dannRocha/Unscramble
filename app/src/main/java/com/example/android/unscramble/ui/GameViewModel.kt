@@ -52,9 +52,7 @@ class GameViewModel : ViewModel() {
             val updatedScore = _uiState.value.score.plus(SCORE_INCREASE)
             updateGameState(updatedScore)
         } else {
-            _uiState.update {currentState ->
-                currentState.copy(isGuessedWordWrong = true)
-            }
+            _uiState.update {currentState -> currentState.copy(isGuessedWordWrong = true) }
         }
 
         updateUserGuess("")
